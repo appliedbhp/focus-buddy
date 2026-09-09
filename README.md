@@ -14,7 +14,7 @@ This changes the integration: the builder receives a small URL-based iframe, not
 
 Hosting must allow your systeme.io page to frame the timer. A host that adds X-Frame-Options: DENY/SAMEORIGIN or a restrictive CSP frame-ancestors may block embedding across origins. Have the host explicitly permit your actual page origin rather than disabling protections broadly. The timer URL must be accessible to your intended visitors; a private sign-in-only preview will not serve as a public embed.
 
-The app loads its robot artwork, brand logo, and stylesheet normally. Rain/ocean recordings are requested from the same timer host only when selected for playback; generated noise works without audio downloads. There are no analytics or background requests to systeme.io. HTML buttons and menus, rather than any automatic navigation, open pop-out/fullscreen views.
+Music uses three official Suno embedded players: Loft Apartment View, Smooth Getaway, and Quiet Revision. The previous nature recordings and generated noise have been removed. Music requires internet access and uses the Suno player's own play, pause, and volume controls. Timer pause and mute affect the timer/chimes only, not the third-party music player.
 
 XP and preferences are saved locally per browser/site origin. A new hosting origin will not inherit XP from the old local file or srcdoc embed. Browser policies can restrict persistence inside third-party iframes. If storage is unavailable, the app displays that status in My robot workshop. Opening the timer URL directly is the most reliable way to use its local storage and supported always-on-top mode. Keep the original timer tab open while using a pop-out.
 
@@ -22,10 +22,7 @@ Preserved features: robot themes, clockwise ring, tutorial, missions, one to fiv
 
 Credits
 - Robots: Bottts Neutral via DiceBear, based on Bottts by Pablo Stanley; free for personal and commercial use. https://www.dicebear.com/styles/bottts-neutral/ and https://bottts.com/
-- Rain: Ove Melaa, CC0. https://opengameart.org/content/rain-ambient-not-loopable-2-versions-available
-- Ocean waves: jasinski (submitted by qubodup), CC0. https://opengameart.org/content/beach-ocean-waves
 
-The original source recordings are included; playback normalizes levels and crossfades loops. No third-party media calls are required.
 
 ## Branding and robot rewards
 
@@ -49,3 +46,5 @@ node tests/rewards-checkins.cjs
 ```
 
 These automated tests use a simulated browser and timer clock to check timer behavior, compact views, settings, persistence, XP milestones, and multiple check-in schedules.
+
+The pop-out and floating panel display an XP bar with earned/required XP and locked/unlocked indicators for all three robot parts. Parts continue unlocking automatically at 20, 40, and 60 XP; XP is not spent.
