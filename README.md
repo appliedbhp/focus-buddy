@@ -58,3 +58,5 @@ This replaces the previous robot artwork and robot body/arms/legs progression de
 Buddy selection now generates three distinct body shapes with randomized limbs, eyes, and mouths whenever the picker opens. Meet three more rerolls the choices. Choosing a buddy saves its exact design; rerolling or reloading does not alter the selected companion.
 
 Adventure team: eight Kenney Roguelike recruits unlock at 0–140 lifetime XP in 20 XP steps. Recruiting and renaming do not spend XP. Names and the active recruit are saved in existing browser storage. Selecting a monster returns to the monster companion; reset buddy preserves the roster. CC0 license included in assets/team/License.txt.
+
+Character reveals use the user-provided Free/Part 1/13.png sprite sheet. The brief, silent effect plays when choosing a monster, recruiting or equipping a teammate, or equipping a monster feature. Reduced-motion preferences disable it.
