@@ -56,3 +56,5 @@ Characters now use Kenney's Monster Builder Pack (CC0). The included license is 
 This replaces the previous robot artwork and robot body/arms/legs progression described above. Music and check-in behavior are unchanged.
 
 Buddy selection now generates three distinct body shapes with randomized limbs, eyes, and mouths whenever the picker opens. Meet three more rerolls the choices. Choosing a buddy saves its exact design; rerolling or reloading does not alter the selected companion.
+
+Adventure team: eight Kenney Roguelike recruits unlock at 0–140 lifetime XP in 20 XP steps. Recruiting and renaming do not spend XP. Names and the active recruit are saved in existing browser storage. Selecting a monster returns to the monster companion; reset buddy preserves the roster. CC0 license included in assets/team/License.txt.
