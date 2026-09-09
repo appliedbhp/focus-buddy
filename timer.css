@@ -72,3 +72,5 @@ h2,#mission-title{font-size:30px;line-height:1.15}
 @media(prefers-reduced-motion:reduce){.buddy-reveal{display:none!important}}
 
 textarea{box-sizing:border-box;width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:10px;resize:vertical}.mission-checklist{text-align:left;margin:20px auto;padding:16px;border:1px solid var(--line);border-radius:14px;max-width:420px}.mission-checklist p{font-size:14px}.mission-checklist label{font-weight:400;overflow-wrap:anywhere}.mission-checklist h3{font-family:Arcade,monospace;font-size:25px;margin-bottom:8px}
+
+.supply-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}.supply-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px;cursor:grab;font-size:14px}.supply-item img{width:54px;height:54px;object-fit:contain}.supply-item small{font-size:11px}.supply-ready{border:2px dashed var(--green);border-radius:14px;padding:12px;min-height:108px}.supply-ready>p{grid-column:1/-1;align-self:center;text-align:center;margin:0;color:var(--muted)}
