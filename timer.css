@@ -86,3 +86,5 @@ textarea{box-sizing:border-box;width:100%;font:inherit;color:var(--ink);backgrou
 .monster-shell,.dancing-buddy,.team-buddy{animation:none!important}
 .monster-piece.detail-left,.monster-piece.detail-right{animation:none!important}
 .dancing-buddy .monster-piece.arm-left,.dancing-buddy .monster-piece.arm-right{animation:monster-sway .8s ease-in-out 6}
+
+.graphs-sticky{position:fixed;left:16px;bottom:max(16px,env(safe-area-inset-bottom));z-index:20;display:flex;align-items:center;gap:8px;box-shadow:0 4px 20px #0005;font-size:13px}.graphs-sticky img{flex-shrink:0}@media(max-width:520px){.graphs-sticky{padding:8px}.graphs-sticky span{display:none}.consult-sticky{max-width:calc(100vw - 100px);padding:8px;font-size:12px}}
