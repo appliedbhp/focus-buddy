@@ -39,3 +39,15 @@ header{max-width:760px}.care-brand{display:flex;align-items:center;gap:10px;colo
 @media (prefers-reduced-motion: reduce) {
   .monster-shell, .monster-piece { animation: none !important; }
 }
+
+/* Anchor limbs to the rendered body width, rather than the square image box. */
+.monster-piece.body{width:var(--body-width);left:calc(50% - var(--body-width)/2)}
+.monster-piece.arm-left{left:auto;right:calc(50% + var(--body-width)*.24);width:auto;height:40%;transform-origin:65% 10%}
+.monster-piece.arm-right{right:auto;left:calc(50% + var(--body-width)*.24);width:auto;height:40%;transform-origin:35% 10%}
+.monster-piece.leg-left{left:auto;right:calc(50% + var(--body-width)*.02);width:auto;height:28%}
+.monster-piece.leg-right{right:auto;left:calc(50% + var(--body-width)*.02);width:auto;height:28%}
+.monster-piece.eye-left{left:auto;right:52%;width:calc(var(--body-width)*.28)}
+.monster-piece.eye-right{right:auto;left:52%;width:calc(var(--body-width)*.28)}
+.monster-piece.mouth{width:calc(var(--body-width)*.44);left:calc(50% - var(--body-width)*.22)}
+.monster-piece.detail-left{left:auto;right:calc(50% + var(--body-width)*.1)}
+.monster-piece.detail-right{right:auto;left:calc(50% + var(--body-width)*.1)}
