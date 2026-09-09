@@ -15,4 +15,81 @@
 <dialog id="sounds-dialog" aria-labelledby="sounds-title"><h2 id="sounds-title">Focus music</h2><p>Choose a track and press play. Open this panel whenever you need to pause or change music. Music uses its own controls and does not pause with the timer. Timer mute controls chimes only.</p><h3>Loft Apartment View</h3><iframe title="Loft Apartment View — Suno music player" src="https://suno.com/embed/a96b9cce-8175-4906-b9c3-425a61fb84db" width="100%" height="150" loading="lazy" allow="autoplay; encrypted-media" style="border:0;border-radius:12px"></iframe><h3>Smooth Getaway</h3><iframe title="Smooth Getaway — Suno music player" src="https://suno.com/embed/2fdc3739-303b-46a6-9de8-41b9f7214a15" width="100%" height="150" loading="lazy" allow="autoplay; encrypted-media" style="border:0;border-radius:12px"></iframe><h3>Quiet Revision</h3><iframe title="Quiet Revision — Suno music player" src="https://suno.com/embed/89139da3-ab0b-40f4-8947-31aee2919fdd" width="100%" height="150" loading="lazy" allow="autoplay; encrypted-media" style="border:0;border-radius:12px"></iframe><p class="muted">Music players are provided by Suno and require an internet connection. Play one track at a time.</p><button class="primary" data-action="close-sounds">Done</button></dialog>
 <dialog id="settings"><h2>Grown-up settings</h2><p class="muted">Start small and adjust together. Saving resets the timer and applies your settings now. Your XP and stickers stay saved.</p><form id="settings-form"><div id="settings-grid"><div><label for="focus-min">Focus minutes</label><input id="focus-min" type="number" min="1" max="60" required></div><div><label for="short-min">Short break minutes</label><input id="short-min" type="number" min="1" max="30" required></div><div><label for="long-min">Final break minutes</label><input id="long-min" type="number" min="1" max="60" required></div><div><label for="round-count">Rounds per quest</label><input id="round-count" type="number" min="1" max="8" required></div></div><label><input type="checkbox" id="checkins"> Yes / No mission checks during focus</label><label for="checks-per-round">Check-ins per focus round</label><select id="checks-per-round"><option value="1">1 · Less frequent (halfway)</option><option value="2">2 check-ins</option><option value="3">3 · Every quarter of the round</option><option value="4">4 check-ins</option><option value="5">5 · More frequent</option></select><p class="muted">Evenly spaced through each round. The timer pauses for your answer.</p><label><input type="checkbox" id="motion"> Reduce buddy motion</label><label><input type="checkbox" id="sound-enabled"> Enable chimes</label><p><button type="button" data-action="sounds">Choose focus music</button></p><label for="volume">Chime volume</label><input id="volume" type="range" min="0" max="50"><button type="button" data-action="preview">Preview chime</button><div class="row actions"><button type="button" data-action="close-settings">Cancel</button><button class="primary">Save & reset timer</button></div></form></dialog>
 <dialog id="tour" aria-labelledby="tour-title"><div class="tour-count" id="tour-count"></div><h2 id="tour-title"></h2><div id="tour-content"></div><div class="row actions"><button data-action="skip-tour">Skip tutorial</button><div class="row"><button id="tour-back" data-action="tour-back">Back</button><button class="primary" id="tour-next" data-action="tour-next">Next</button></div></div></dialog>
-<dialog id="team-dialog"><h2>My adventure team</h2><p>Recruit a teammate, give them a name, and take them on a mission. Your first recruit is free. Every 20 XP unlocks another; your XP is yours to keep.</p><div id="team-list"></div><button data-action="close-team">Done</button></dialog><dialog id="recruit-dialog"><h2>Name your teammate</h2><form id="recruit-form"><label for="recruit-name">Their name</label><input id="recruit-name" maxlength="24" required autocomplete="off"><div class="row"><button type="submit" class="primary">Save teammate</button><button type="button" data-action="cancel-recruit">Cancel</button></div></form></dialog><dialog id="plan-dialog" aria-labelledby="plan-title"><h2 id="plan-title">Get ready for your mission</h2><p>Done → Do → Get ready → Do → Done</p><form id="plan-form"><label for="plan-done">1. Picture done: what will be finished?</label><input id="plan-done" maxlength="160" placeholder="My paragraph has five sentences." required><label for="plan-steps">2. Plan the doing: what are your small steps?</label><textarea id="plan-steps" rows="4" maxlength="720" placeholder="Pick my topic&#10;Write five sentences&#10;Read it back" required></textarea><small>One step per line, up to six steps.</small><h3>3. Get ready: pack your supplies</h3><p>Drag what you need into your ready space, or tap an item to add it. Tap a packed item to remove it.</p><div id="supply-tray" class="supply-grid" aria-label="Available supplies"></div><h3>Ready for my mission</h3><div id="supply-ready" class="supply-grid supply-ready" aria-label="Supplies ready for my mission"></div><p id="supply-status" role="status" aria-live="polite" class="muted"></p><small>Icons by <a href="https://icons8.com" target="_blank" rel="noopener">Icons8</a>.</small><label for="plan-supplies">Anything else you need?</label><input id="plan-supplies" maxlength="160" placeholder="Notebook, pencil, assignment"><label for="plan-tabs">How many browser tabs do you need?</label><input id="plan-tabs" type="number" min="0" max="20" required><small>Include this timer tab if you need it. Count tabs yourself.</small><label><input id="plan-ready" type="checkbox" required> My supplies are ready, and I closed extra tabs.</label><p class="muted">Next: start your timer and follow your steps. When you finish, check your work against your picture of done.</p><div class="row"><button type="submit" class="primary">Ready — start my mission</button><button type="button" data-action="close-plan">Back</button></div></form></dialog><dialog id="gate-dialog" aria-labelledby="gate-title"><h2 id="gate-title">Grown-up access</h2><p>Please solve this math question to continue.</p><form id="gate-form"><label id="gate-question" for="gate-answer"></label><input id="gate-answer" type="text" inputmode="numeric" autocomplete="off" required><p id="gate-error" role="status"></p><div class="row"><button class="primary" type="submit">Continue</button><button type="button" data-action="close-gate">Cancel</button></div></form></dialog><dialog id="graphs-dialog"><h2>Your last 7 days</h2><p>Small steps count. Yes and No answers are both useful check-ins.</p><div id="graphs-content"></div><p id="graphs-storage" class="muted"></p><button data-action="close-graphs">Done</button></dialog><button class="consult-sticky" data-action="consult"><img src="assets/consultation.png" width="32" height="32" alt=""> Schedule a consultation</button><dialog id="celebration" aria-labelledby="celebration-title"><div id="celebration-confetti" aria-hidden="true"></div><div class="celebration-content"><h2 id="celebration-title">All steps complete!</h2><p>Your whole team is cheering for you.</p><div id="celebration-team"></div><button class="primary" data-action="close-celebration">Check my finished work</button></div></dialog><button class="graphs-sticky" data-action="graphs" aria-label="My progress graphs"><img src="assets/graphs.png" width="32" height="32" alt=""><span>My progress</span></button><script src="timer.js"></script></body></html>
+<dialog id="team-dialog"><h2>My adventure team</h2><p>Recruit a teammate, give them a name, and take them on a mission. Your first recruit is free. Every 20 XP unlocks another; your XP is yours to keep.</p><div id="team-list"></div><button data-action="close-team">Done</button></dialog><dialog id="recruit-dialog"><h2>Name your teammate</h2><form id="recruit-form"><label for="recruit-name">Their name</label><input id="recruit-name" maxlength="24" required autocomplete="off"><div class="row"><button type="submit" class="primary">Save teammate</button><button type="button" data-action="cancel-recruit">Cancel</button></div></form></dialog><dialog id="plan-dialog" aria-labelledby="plan-title"><h2 id="plan-title">Get ready for your mission</h2><p>Done → Do → Get ready → Do → Done</p><form id="plan-form"><label for="plan-done">1. Picture done: what will be finished?</label><input id="plan-done" maxlength="160" placeholder="My paragraph has five sentences." required><label for="plan-steps">2. Plan the doing: what are your small steps?</label><textarea id="plan-steps" rows="4" maxlength="720" placeholder="Pick my topic&#10;Write five sentences&#10;Read it back" required></textarea><small>One step per line, up to six steps.</small><h3>3. Get ready: pack your supplies</h3><p>Drag what you need into your ready space, or tap an item to add it. Tap a packed item to remove it.</p><div id="supply-tray" class="supply-grid" aria-label="Available supplies"></div><h3>Ready for my mission</h3><div id="supply-ready" class="supply-grid supply-ready" aria-label="Supplies ready for my mission"></div><p id="supply-status" role="status" aria-live="polite" class="muted"></p><small>Icons by <a href="https://icons8.com" target="_blank" rel="noopener">Icons8</a>.</small><label for="plan-supplies">Anything else you need?</label><input id="plan-supplies" maxlength="160" placeholder="Notebook, pencil, assignment"><label for="plan-tabs">How many browser tabs do you need?</label><input id="plan-tabs" type="number" min="0" max="20" required><small>Include this timer tab if you need it. Count tabs yourself.</small><label><input id="plan-ready" type="checkbox" required> My supplies are ready, and I closed extra tabs.</label><p class="muted">Next: start your timer and follow your steps. When you finish, check your work against your picture of done.</p><div class="row"><button type="submit" class="primary">Ready — start my mission</button><button type="button" data-action="close-plan">Back</button></div></form></dialog><dialog id="gate-dialog" aria-labelledby="gate-title"><h2 id="gate-title">Grown-up access</h2><p>Please solve this math question to continue.</p><form id="gate-form"><label id="gate-question" for="gate-answer"></label><input id="gate-answer" type="text" inputmode="numeric" autocomplete="off" required><p id="gate-error" role="status"></p><div class="row"><button class="primary" type="submit">Continue</button><button type="button" data-action="close-gate">Cancel</button></div></form></dialog><dialog id="graphs-dialog"><h2>Your last 7 days</h2><p>Small steps count. Yes and No answers are both useful check-ins.</p><div id="graphs-content"></div><p id="graphs-storage" class="muted"></p><button data-action="close-graphs">Done</button></dialog><button class="consult-sticky" data-action="consult"><img src="assets/consultation.png" width="32" height="32" alt=""> Schedule a consultation</button><dialog id="celebration" aria-labelledby="celebration-title"><div id="celebration-confetti" aria-hidden="true"></div><div class="celebration-content"><h2 id="celebration-title">All steps complete!</h2><p>Your whole team is cheering for you.</p><div id="celebration-team"></div><audio id="victory-song" controls preload="none" src="assets/music/task-done.mp3"></audio><p id="song-status" role="status"></p><button type="button" id="lyrics-follow">Pause lyric scrolling</button><div id="victory-lyrics" tabindex="0" aria-label="Task Done lyrics">[Verse 1]
+You stayed on my side
+When the screen went wild
+One more tab, one more try
+You kept me in line
+
+Sticky note on the wall
+Timer set, no stall
+I almost slipped away
+You pulled me back today
+
+[Pre-Chorus]
+And now the list is gone
+Last box, check-mark strong
+I hear my people sing
+My little victory ring
+
+[Chorus]
+I got the task done!
+I got the task done!
+You cheered so loud for me
+Now everybody sees
+
+I got the task done!
+I got the task done!
+Focus Buddy, Adventure Team
+We made it clean
+
+[Verse 2]
+You brought the snack break grin
+I brought the stubborn win
+Maps out on the floor
+We were built for more
+
+You said, &quot;keep going, champ&quot;
+I crossed that finish stamp
+Small step, then the leap
+Now we all get to breathe
+
+[Pre-Chorus]
+And now the list is gone
+Last box, check-mark strong
+I hear my people sing
+My little victory ring
+
+[Chorus]
+I got the task done!
+I got the task done!
+You cheered so loud for me
+Now everybody sees
+
+I got the task done!
+I got the task done!
+Focus Buddy, Adventure Team
+We made it clean
+
+[Bridge]
+Hands up in the air
+We earned this moment here
+One brave step at a time
+Turned the hard into mine
+
+[Final Chorus]
+I got the task done!
+I got the task done!
+You cheered so loud for me
+Now everybody sees
+
+I got the task done!
+I got the task done!
+Focus Buddy, Adventure Team
+We made it clean
+
+I got the task done!
+I got the task done!
+We did it our way through
+Now I’m high-fiving you
+</div><small>Lyrics scroll approximately with playback. Scroll yourself to take control.</small><button class="primary" data-action="close-celebration">Check my finished work</button></div></dialog><button class="graphs-sticky" data-action="graphs" aria-label="My progress graphs"><img src="assets/graphs.png" width="32" height="32" alt=""><span>My progress</span></button><script src="timer.js"></script></body></html>
