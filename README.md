@@ -54,3 +54,5 @@ The pop-out and floating panel display an XP bar with earned/required XP and loc
 Characters now use Kenney's Monster Builder Pack (CC0). The included license is in assets/monsters/License.txt. Choose Bubbles (blue), Sprout (green), or Sunny (yellow). Each starts with a complete body and face. The workshop offers optional ears at 20 XP, horns at 40 XP, and antennas at 60 XP. Choose one feature or the simple starter look. Features unlock with lifetime XP and do not spend it. Existing browser XP and settings are preserved; the chosen feature is saved too.
 
 This replaces the previous robot artwork and robot body/arms/legs progression described above. Music and check-in behavior are unchanged.
+
+Buddy selection now generates three distinct body shapes with randomized limbs, eyes, and mouths whenever the picker opens. Meet three more rerolls the choices. Choosing a buddy saves its exact design; rerolling or reloading does not alter the selected companion.
