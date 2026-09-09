@@ -49,3 +49,16 @@ h2,#mission-title{font-size:30px;line-height:1.15}
 .compact .timer{font-size:27px;padding:6px 8px}.break .timer{color:#263a24}
 .mission-help{font-size:14px;color:var(--muted);line-height:1.5;margin:12px 0;text-align:left}
 #ready-controls>label{text-align:left}.compact-mission{font-size:14px;overflow-wrap:anywhere}
+
+/* Bare seven-segment digits, tinted to the selected buddy. */
+.timer,.compact .timer,.break .timer{
+  color:var(--accent);background:none;border:0;border-radius:0;box-shadow:none;
+  text-shadow:0 0 5px color-mix(in srgb,var(--accent) 25%,transparent);
+  animation:clock-glow 4s ease-in-out infinite;
+}
+@keyframes clock-glow{
+  0%,100%{text-shadow:0 0 4px color-mix(in srgb,var(--accent) 20%,transparent)}
+  50%{text-shadow:0 0 8px color-mix(in srgb,var(--accent) 45%,transparent)}
+}
+.no-motion .timer{animation:none!important}
+@media(prefers-reduced-motion:reduce){.timer{animation:none!important}}
