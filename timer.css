@@ -12,3 +12,30 @@ header{max-width:760px}.care-brand{display:flex;align-items:center;gap:10px;colo
 .xp-card{width:100%;margin:12px 0;padding:12px;border:1px solid var(--line);border-radius:14px;text-align:left;background:var(--panel)}.xp-caption{display:flex;justify-content:space-between;gap:8px;font-size:12px}.xp-bar{display:block;width:100%;height:10px;margin:9px 0;accent-color:var(--green);border:0;border-radius:10px;overflow:hidden}.xp-bar::-webkit-progress-bar{background:var(--bg)}.xp-bar::-webkit-progress-value{background:var(--green)}.xp-bar::-moz-progress-bar{background:var(--green)}.xp-locks{display:flex;justify-content:space-between;font-size:12px;gap:8px}.xp-locks>span{opacity:.65}.xp-locks>span.earned{opacity:1;color:var(--green)}.xp-locks small{display:block;padding-top:3px}.compact .xp-card{box-sizing:border-box}#floatbox{max-height:calc(100dvh - 24px);overflow:auto}
 
 .monster-shell{position:relative;width:150px;height:150px;flex-shrink:0}.monster-shell.large{width:250px;height:250px;margin:auto}.monster-shell.choice,.monster-shell.small-monster{width:90px;height:90px;margin:auto}.monster-shell.mini-robot{width:110px;height:110px}.monster-piece{position:absolute;object-fit:contain}.monster-piece.body{left:25%;top:25%;width:50%;height:50%}.monster-piece.arm-left{left:9%;top:40%;width:23%;height:40%;transform:scaleX(-1)}.monster-piece.arm-right{right:9%;top:40%;width:23%;height:40%}.monster-piece.leg-left{left:27%;top:68%;width:20%;height:28%;transform:scaleX(-1)}.monster-piece.leg-right{right:27%;top:68%;width:20%;height:28%}.monster-piece.eye-left{left:33%;top:36%;width:15%;height:18%}.monster-piece.eye-right{right:33%;top:36%;width:15%;height:18%}.monster-piece.mouth{left:39%;top:58%;width:22%;height:10%}.monster-piece.detail-left{left:18%;top:7%;width:25%;height:33%;transform:scaleX(-1)}.monster-piece.detail-right{right:18%;top:7%;width:25%;height:33%}#monster-options button[aria-pressed=true]{outline:2px solid var(--green)}
+
+/* Small, slow movements keep the timer and surrounding layout steady. */
+@keyframes monster-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes monster-sway {
+  0%, 100% { rotate: -2deg; }
+  50% { rotate: 2deg; }
+}
+.monster-shell { animation: monster-bob 4.8s ease-in-out infinite; }
+.buddy-option:nth-child(2) .monster-shell { animation-delay: -1.6s; }
+.buddy-option:nth-child(3) .monster-shell { animation-delay: -3.2s; }
+.monster-piece.arm-left, .monster-piece.arm-right {
+  transform-origin: 50% 10%;
+  animation: monster-sway 5.6s ease-in-out infinite;
+}
+.monster-piece.arm-right { animation-direction: reverse; }
+.monster-piece.detail-left, .monster-piece.detail-right {
+  transform-origin: 50% 90%;
+  animation: monster-sway 6.4s ease-in-out infinite;
+}
+.monster-piece.detail-right { animation-direction: reverse; }
+.no-motion .monster-shell, .no-motion .monster-piece { animation: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .monster-shell, .monster-piece { animation: none !important; }
+}
