@@ -103,3 +103,5 @@ textarea{box-sizing:border-box;width:100%;font:inherit;color:var(--ink);backgrou
 .color-character-options button{overflow:hidden}
 
 .cute-robot{transform-origin:50% 87%;transition:transform .45s ease-out}.cute-robot[data-pose="died"]{transform:rotate(75deg)}
+
+.lab-droid{display:block;width:96px;height:96px;flex-shrink:0;margin:auto;background-size:384px 96px;background-repeat:no-repeat;image-rendering:pixelated;animation:lab-idle 1s steps(4) infinite}@keyframes lab-idle{from{background-position-x:0}to{background-position-x:-384px}}.no-motion .lab-droid,#celebration.still .lab-droid{animation:none!important}@media(prefers-reduced-motion:reduce){.lab-droid{animation:none!important}}
