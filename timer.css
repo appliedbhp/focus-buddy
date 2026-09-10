@@ -98,6 +98,6 @@ textarea{box-sizing:border-box;width:100%;font:inherit;color:var(--ink);backgrou
 .color-character-options{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0 20px}.color-character-options button{padding:6px 2px;font-size:12px;min-width:0}.color-character-options img{display:block;width:100%;height:80px;object-fit:contain}.color-character-options button[aria-pressed=true]{outline:2px solid var(--accent);background:var(--panel)}#start-characters h2{margin-bottom:8px}@media(max-width:380px){.color-character-options{gap:4px}.color-character-options img{height:60px}}
 
 /* Compensate for the colorful pack's left-weighted sprite canvas. */
-.colorful-robot{transform:translateX(calc(9% + 15px)) scale(1.2);transform-origin:center}
-.color-character-options .colorful-preview{transform:translateX(calc(7% + 15px)) scale(1.15);transform-origin:center}
+.colorful-robot{transform:translateX(calc(9% + 5px)) scale(1.2);transform-origin:center}
+.color-character-options .colorful-preview{transform:translateX(calc(7% + 5px)) scale(1.15);transform-origin:center}
 .color-character-options button{overflow:hidden}
