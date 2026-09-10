@@ -101,3 +101,5 @@ textarea{box-sizing:border-box;width:100%;font:inherit;color:var(--ink);backgrou
 .colorful-robot{transform:translateX(calc(9% + 5px)) scale(1.2);transform-origin:center}
 .color-character-options .colorful-preview{transform:translateX(calc(7% + 5px)) scale(1.15);transform-origin:center}
 .color-character-options button{overflow:hidden}
+
+.cute-robot{transform-origin:50% 87%;transition:transform .45s ease-out}.cute-robot[data-pose="died"]{transform:rotate(75deg)}
